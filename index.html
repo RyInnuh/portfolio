@@ -1,153 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Giga Super Portfolio</title>
+    <title>Moje Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/BO_Skull.png" type="image/png">
+    <link rel="icon" href="images/other/BO_Skull.png" type="image/png">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/BO_Skull.png" alt="Logo" width="50" max-width="50" draggable="false">
+            <img src="images/other/BO_Skull.png" alt="Logo portfolio" draggable="false">
         </div>
         <div class="title">
             <b>Witaj w moim portfolio.</b>
-            <br>
-            <b>Jest to kombinacja kilku moich projektów złączonych w jedno (może być trochę chaotycznie)</b>
+            <span>Jest to kombinacja kilku moich projektów złączonych w jedno (może być trochę chaotycznie)</span>
         </div>
     </header>
-    <nav>
+
+    <nav aria-label="Główna nawigacja">
+        <div class="nav-title">MENU</div>
         <div class="button-container">
-            <div class="button main"></div>
-            <div class="button drawboard"></div>
+            <button class="nav-button active" data-tab="about" type="button">
+                <span class="nav-index">01</span>
+                <span>O Mnie</span>
+            </button>
+            <button class="nav-button" data-tab="projects" type="button">
+                <span class="nav-index">02</span>
+                <span>Moje Projekty</span>
+            </button>
+            <button class="nav-button" data-tab="whiteboard" type="button">
+                <span class="nav-index">03</span>
+                <span>Tablica</span>
+            </button>
         </div>
     </nav>
+
     <main>
-        <div class="notification">
-            <p>Elementy GUI są draggable!</p>
-        </div>
-        <div class="blok standard-blok" style="left: 50%; top: 50%;">
-            [Hover Me!]
-            <div class="description">
-                    <p>To jest opis elementu!</p>
+        <section class="page active" id="about" aria-labelledby="about-title">
+            <div class="page-shell about-layout">
+                <div class="window intro-window">
+                    <div class="window-bar">
+                        <span>about_me.txt</span>
+                        <span class="window-status">HELLO WORLD!</span>
+                    </div>
+                    <div class="window-content">
+                        <h1 id="about-title">Hej, jestem <span class="text-accent">Kawabanga</span>.</h1>
+                        <p class="lead">
+                            Tworzę projekty łączące programowanie, grafikę i projektowanie interfejsów.
+                            To miejsce jest zbiorem rzeczy, nad którymi pracowałem i eksperymentów,
+                            które uznałem za warte pokazania.
+                        </p>
+                        <p>
+                            Najczęściej pracuję z <span class="text-code">TypeScript</span>,
+                            <span class="text-code">JavaScript</span>, <span class="text-code">Python</span>
+                            oraz narzędziami do grafiki takimi jak <span class="text-code">Adobe Illustrator</span> i <span class="text-code">Inkscape</span>.
+                        </p>
+                        <div class="about-actions">
+                            <button class="ui-button" type="button" data-open-tab="projects">Zobacz projekty →</button>
+                            <button class="ui-button secondary" type="button" data-open-tab="whiteboard">Otwórz tablicę</button>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="about-side">
+                    <div class="window compact-window">
+                        <div class="window-bar"><span>stack.cfg</span></div>
+                        <div class="window-content tag-list">
+                            <span>TypeScript</span>
+                            <span>JavaScript</span>
+                            <span>Python</span>
+                            <span>C++</span>
+                            <span>HTML / CSS</span>
+                            <span>Adobe Illustrator</span>
+                            <span>Inkscape</span>
+                        </div>
+                    </div>
+
+                    <div class="window compact-window">
+                        <div class="window-bar"><span>status.log</span></div>
+                        <div class="window-content status-list">
+                            <p><span class="status-dot"></span> Dostępny do nowych projektów</p>
+                            <p><span class="text-muted">KONTAKT:</span> DC - @ryinner </p>
+                            <p><span class="text-muted">FOCUS:</span> Web / Design / Development</p>
+                        </div>
+                    </div>
+                </aside>
             </div>
-        </div>
-        <div class="blok standard-blok" style="left: 50%; top: 50%;">
-            [About Me]
-            <div class="description">
+        </section>
+
+        <section class="page" id="projects" aria-labelledby="projects-title">
+            <div class="page-shell projects-page">
+                <div class="section-heading">
+                    <div>
+                        <h1 id="projects-title">Moje Projekty</h1>
+                    </div>
+                    <p>Kliknij projekt, aby otworzyć pełny podgląd.</p>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card" tabindex="0" role="button" data-project="goc" aria-label="Otwórz projekt GOC Branding">
+                        <div class="project-image">
+                            <img src="images/goc/GOC.png" alt="Main GOC Logo" draggable="false">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-number">PROJEKT 1</p>
+                            <h2>GOC Logo Design</h2>
+                            <p>Grafiki przedstawiające moją interpretację logo dla Globalnej Koalicji Okultystycznej z fikcyjnej strony SCP Wiki.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" tabindex="0" role="button" data-project="mcd" aria-label="Otwórz projekt MC&D Redesign">
+                        <div class="project-image">
+                            <img src="images/mc&d/MC&D.png" alt="Logo MC&D" draggable="false">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-number">PROJECT 2</p>
+                            <h2>MC&D Logo Design</h2>
+                            <p>Remake i rozwinięcie stylistyki logo Marshall, Carter & Dark.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" tabindex="0" role="button" data-project="graphic_design" aria-label="Otwórz projekt Graphic Design">
+                        <div class="project-image">
+                            <img src="images/posters/939_sketch.png" alt="Ilustracja SCP-939" draggable="false">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-number">PROJECT 3</p>
+                            <h2>Ilustracje i Plakaty</h2>
+                            <p>Uproszczone ilustracje i plakaty do projektów.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" tabindex="0" role="button" data-project="support_unit_project" aria-label="Otwórz projekt Support Unit Project">
+                        <div class="project-image">
+                            <img src="images/other/Physics_bird.png" alt="Emblemat z mieczem" draggable="false">
+                        </div>
+                        <div class="project-info">
+                            <p class="project-number">PROJECT 4</p>
+                            <h2>Support Unit Project</h2>
+                            <p>Discord bot do wsparcia serwera poprzez pomocne systemy.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="page whiteboard-page" id="whiteboard" aria-label="Tablica">
+            <div class="whiteboard-help">
+                <span class="text-accent">TABLICA:</span> elementy GUI są draggable.
+            </div>
+
+            <div class="blok standard-blok">
+                [Hover Me!]
+                <div class="description"><p>To jest opis elementu!</p></div>
+            </div>
+
+            <div class="blok standard-blok">
+                [About Me]
+                <div class="description">
                     <p>Hej, witaj na moim portfolio. Jestem full-stack developerem z doświadczeniem w TypeScript, JavaScript, Python i C++.</p>
+                </div>
             </div>
-        </div>
-        <div class="blok" style="left: 60%; top: 50%;"">
-            <img src="images/PHYSICS.png" alt="Medal" width="100" draggable="false">
-        </div>
-        <div class="blok" style="left: 40%; top: 50%;"">
-            <img src="images/MC&D.png" alt="MC&D" width="100" draggable="false">
-                <div class="description">
-                    <p>Mój remake logo "MC&D" pochodzącego z SCP Wiki.</p>
+
+            <div class="blok image-blok">
+                <img src="images/other/VERYSPOOKYGOC.png" alt="Halloween GOC" width="100" draggable="false">
+                <div class="description"><p>Halloweenowy remake logo dla Globalnej Koalicji Okultystycznej.</p></div>
+            </div>
+
+            <div class="blok image-blok">
+                <img src="images/other/spooky5.png" alt="Halloween PHYSICS" width="100" draggable="false">
+                <div class="description"><p>Halloweenowy remake logo dla dywizji "PHYSICS" Globalnej Koalicji Okultystycznej.</p></div>
+            </div>
+
+            <div class="blok image-blok">
+                <img src="images/symbols/BR_FallingShells.png" alt="Artyleria" width="200" draggable="false">
+                <div class="description"><p>Spadające pociski artylerii</p></div>
+            </div>
+
+            <div class="blok image-blok wide-image">
+                <img src="images/posters/939_sketch.png" alt="SCP-939" width="200" draggable="false">
+                <div class="description"><p>Uproszczona ilustracja SCP-939.</p></div>
+            </div>
+
+            <div class="blok image-blok wide-image">
+                <img src="images/symbols/Explosion.png" alt="Eksplozja" width="200" draggable="false">
+                <div class="description"><p>Uproszczona ilustracja eksplozji (orbital laser).</p></div>
+            </div>
+
+            <div class="blok image-blok">
+                <img src="images/symbols/Anonymous.png" alt="Anonim" width="150" draggable="false">
+                <div class="description"><p>Uproszczona ilustracja anonimowego postaci.</p></div>
+            </div>
+            
+            <div class="blok image-blok">
+                <img src="images/symbols/Urumi.png" alt="Urumi" width="150" draggable="false">
+                <div class="description"><p>Uproszczona ilustracja miecza Urumi.</p></div>
+            </div>
+            
+            <div class="blok image-blok">
+                <img src="images/symbols/Dove.png" alt="Gołąb" width="150" draggable="false">
+                <div class="description"><p>Uproszczona ilustracja gołębia.</p></div>
+            </div>
+            
+            <div class="blok image-blok">
+                <img src="images/symbols/DragonHead.png" alt="Głowa smoka" width="150" draggable="false">
+                <div class="description"><p>Uproszczona ilustracja głowy smoka.</p></div>
+            </div>
+            
+            <div class="blok image-blok">
+                <img src="images/symbols/PackOfWolves.png" alt="Pack of Wolves" width="150" draggable="false">
+                <div class="description"><p>Uproszczona ilustracja grupy wilków.</p></div>
+            </div>
+        </section>
+
+        <div class="project-modal" id="project-modal" aria-hidden="true">
+            <div class="modal-backdrop" data-close-modal></div>
+            <article class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <div class="window-bar modal-bar">
+                    <span id="modal-file">project.exe</span>
+                    <button class="modal-close" type="button" data-close-modal aria-label="Zamknij projekt">×</button>
                 </div>
-        </div>
-        <div class="blok" style="left: 40%; top: 50%;"">
-            <img src="images/GOC_PTOLEMY.png" alt="PTOLEMY" width="100" draggable="false">
-                <div class="description">
-                    <p>Orginalne logo dla dywizji "PTOLEMY" Globalnej Koalicji Okultystycznej z SCP Wiki.</p>
+
+                <div class="modal-content">
+                    <div class="modal-heading">
+                        <p class="eyebrow" id="modal-kicker">/// PROJECT</p>
+                        <h2 id="modal-title">Tytuł projektu</h2>
+                        <p id="modal-description"></p>
+                    </div>
+
+                    <div class="carousel" aria-label="Galeria projektu">
+                        <button class="carousel-button previous" type="button" id="carousel-prev" aria-label="Poprzednie zdjęcie">←</button>
+                        <div class="carousel-stage" id="carousel-stage"></div>
+                        <button class="carousel-button next" type="button" id="carousel-next" aria-label="Następne zdjęcie">→</button>
+                    </div>
+                    <div class="carousel-counter" id="carousel-counter"></div>
+
+                    <div class="project-details">
+                        <div>
+                            <p class="detail-label">O PROJEKCIE</p>
+                            <p id="modal-details"></p>
+                        </div>
+                        <div>
+                            <p class="detail-label">TECH / NARZĘDZIA</p>
+                            <div class="tag-list modal-tags" id="modal-tags"></div>
+                        </div>
+                    </div>
                 </div>
+            </article>
         </div>
-        <div class="blok" style="left: 40%; top: 50%;"">
-            <img src="images/BO_Skull.png" alt="Czacha" width="100" draggable="false">
-                <div class="description">
-                    <p>:skull:</p>
-                </div>
-        </div>
-        <div class="blok" style="left: 40%; top: 50%;"">
-            <img src="images/939_sketch.png" alt="Pies" width="200" draggable="false">
-                <div class="description">
-                    <p>Uproszczona ilustracja SCP-939.</p>
-                </div>
-        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
-<script>
-
-    function randomizePosition(el) {
-        const main = document.querySelector('main');
-        const maxX = main.clientWidth - el.offsetWidth;
-        const maxY = main.clientHeight - el.offsetHeight;
-        while (true) {
-            const randomX = Math.floor(Math.random() * maxX);
-            const randomY = Math.floor(Math.random() * maxY);
-
-            let collision = false;
-            const bloks = document.querySelectorAll('.blok');
-            for (const otherEl of bloks) {
-                if (otherEl === el) continue; // Pomijamy sam element
-                const otherRect = otherEl.getBoundingClientRect();
-                const newRect = {
-                    left: randomX,
-                    top: randomY,
-                    right: randomX + el.offsetWidth,
-                    bottom: randomY + el.offsetHeight
-                };
-
-                if (!(newRect.right < otherRect.left || 
-                      newRect.left > otherRect.right || 
-                      newRect.bottom < otherRect.top || 
-                      newRect.top > otherRect.bottom)) {
-                    collision = true;
-                    break;
-                }
-            }
-
-            if (!collision) {
-                el.style.left = `${randomX}px`;
-                el.style.top = `${randomY}px`;
-                break;
-            }
-        }
-    }
-
-    let highetstZIndex = 0;
-    let bloks = document.querySelectorAll('.blok');
-    let main = document.querySelector('main');
-    bloks.forEach((el) => {
-        let drag = false;
-        let offsetX = 0;
-        let offsetY = 0;
-
-        randomizePosition(el);
-
-        el.addEventListener("pointerdown", (e) => {
-            drag = true;
-
-            highetstZIndex++;
-            el.style.zIndex = highetstZIndex;
-
-            offsetX = e.clientX - el.offsetLeft;
-            offsetY = e.clientY - el.offsetTop;
-
-            el.setPointerCapture(e.pointerId); // Ten jest opcjonalny
-        })
-
-        el.addEventListener("pointermove", (e) => {
-            if (!drag) return;
-
-            let x = e.clientX - offsetX;
-            let y = e.clientY - offsetY;
-
-            const maxX = main.clientWidth - el.offsetWidth;
-            const maxY = main.clientHeight - el.offsetHeight;
-
-            x = Math.max(0, Math.min(x, maxX));
-            y = Math.max(0, Math.min(y, maxY));
-
-            el.style.left = `${x}px`;
-            el.style.top = `${y}px`;
-        })
-
-        el.addEventListener("pointerup", (e) => {
-            drag = false;
-        })
-    })
-</script>
 </html>
