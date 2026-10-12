@@ -15,31 +15,13 @@ navButtons.forEach((button) => button.addEventListener("click", () => openTab(bu
 openTabButtons.forEach((button) => button.addEventListener("click", () => openTab(button.dataset.openTab)));
 
 const projects = {
-    goc: {
-        file: "goc_branding.project",
-        title: "GOC Branding",
-        description: "Logo dla Globalnej Koalicji Okultystycznej i jej dywizji.",
-        details: `Swego czasu dużo czytałem opowieści i raportów z SCP Wiki. Niedawno zachciałem spróbować stworzyć własną interpretację logo Globalnej Koalicji Okulstystycznej i jej dywizji.
-        Celem było stworzenie ich w taki sposób, aby znaczenie symbolu było jasne (niekoniecznie wprost, ale poprzez skojarzenia i kontekst).
-        `,
-        tags: ["Adobe Illustrator", "Logo Design"],
-        images: ["images/goc/GOC.png", "images/goc/GOC_PHYSICS.png", "images/goc/GOC_PNEUMA.png", "images/goc/GOC_PTOLEMY.png", "images/goc/GOC_PSYCHE.png", "images/goc/GOC_PSYCHE_SPECIALOBSERVERS.png", "images/goc/GOC_PANGAEA.png", "images/goc/GOC_GRC.png","images/goc/GOC_C108.png", "images/goc/GOC_HICOM.png", "images/goc/GOC_ParaCourt.png"]
-    },
-    mcd: {
-        file: "mcd_redesign.project",
-        title: "MC&D Redesign",
-        description: "Remake logo Marshall, Carter & Dark Ltd. w mojej interpretacji. Inspirowane pracą @Randomini.",
-        details: "Podobnie jak w przypadku GOC, celem było stworzenie spójnego logo w mojej własnej interpretacji.",
-        tags: ["Adobe Illustrator", "Logo Design"],
-        images: ["images/mc&d/MC&D.png"]
-    },
-    graphic_design: {
+    grafika: {
         file: "graphic_design.project",
-        title: "Ilustracje i Plakaty",
-        description: "Zbiór prostszych ilustracji i plakatów.",
-        details: "Tutaj trafiają eksperymenty z sylwetką, uproszczeniem kształtów i czytelnością grafiki w małej skali. Część prac może później służyć jako element interfejsu, emblemat albo grafika pomocnicza.",
-        tags: ["Adobe Illustrator", "Ilustracje i Plakaty"],
-        images: ["images/posters/939_sketch.png", "images/posters/UNS_Kanaloa_Poster.png", "images/posters/GOC_HELIOS_POSTER1.png", "images/posters/GOC_HELIOS_POSTER2.png", "images/posters/MC&D_MarshallPoster.png"]
+        title: "Grafika Vektorowa",
+        description: "Grafika wektorowa - logo, ilustracje, itp.",
+        details: `Od pewnego czasu bawię się grafiką wektorową. W tym czasie stworzyłem kilka projektów o różnym stopniu jakości. Tutaj znajdziesz część z nich.`,
+        tags: ["Adobe Illustrator", "Logo Design", "Graphic Design"],
+        images: ["images/goc/GOC.png", "images/goc/GOC_PHYSICS.png", "images/goc/GOC_PNEUMA.png", "images/goc/GOC_PTOLEMY.png", "images/goc/GOC_PSYCHE.png", "images/goc/GOC_PSYCHE_SPECIALOBSERVERS.png", "images/goc/GOC_PANGAEA.png", "images/goc/GOC_GRC.png","images/goc/GOC_C108.png", "images/goc/GOC_HICOM.png", "images/goc/GOC_ParaCourt.png", "images/mc&d/MC&D.png", "images/posters/939_sketch.png", "images/posters/UNS_Kanaloa_Poster.png", "images/posters/GOC_HELIOS_POSTER1.png", "images/posters/GOC_HELIOS_POSTER2.png", "images/posters/MC&D_MarshallPoster.png"]
     },
     utility_bot: {
         file: "utility_bot.project",
