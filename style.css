@@ -252,7 +252,6 @@ main {
 .project-info h2 { margin: 0 0 10px; color: var(--text-strong); font-family: var(--display-font); }
 .project-info p:last-child { margin: 0; color: var(--muted); line-height: 1.55; }
 
-/* Klasy do stylowania tekstu przez <span> */
 .text-accent { color: var(--gold); font-weight: 700; }
 .text-highlight { color: #0c0a08; background: var(--gold); padding: 0.08em 0.28em; }
 .text-highlight-alt { color: var(--text-strong); border-bottom: 2px solid var(--purple); }
@@ -264,7 +263,6 @@ main {
 .font-clean { font-family: var(--main-font); }
 .font-display { font-family: var(--display-font); }
 
-/* Tablica */
 .whiteboard-page { overflow: hidden; touch-action: none; }
 .whiteboard-help {
     position: absolute;
@@ -338,7 +336,6 @@ main {
 .blok:hover .description { opacity: 1; visibility: visible; }
 .blok:active .description { opacity: 0; visibility: hidden; }
 
-/* Duże okno projektu */
 .project-modal { position: absolute; inset: 0; z-index: 5000; display: none; }
 .project-modal.open { display: grid; place-items: center; }
 .modal-backdrop { position: absolute; inset: 0; background: #000000b0; backdrop-filter: blur(3px); }
