@@ -41,7 +41,7 @@ const projects = {
         tags: ["Adobe Illustrator", "Ilustracje i Plakaty"],
         images: ["images/posters/939_sketch.png", "images/posters/UNS_Kanaloa_Poster.png", "images/posters/GOC_HELIOS_POSTER1.png", "images/posters/GOC_HELIOS_POSTER2.png", "images/posters/MC&D_MarshallPoster.png"]
     },
-    support_unit_project: {
+    utility_bot: {
         file: "utility_bot.project",
         title: "Utility Bot",
         description: "Bot do discorda, zawierający zestaw prostych narzędzi i systemów do wsparcia serwera, międzyinnymi: Relay System, Stikcy Messages System, Reminder System i Giveaway System..",
